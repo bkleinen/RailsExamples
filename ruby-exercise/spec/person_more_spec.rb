@@ -15,7 +15,7 @@ describe Person do
     end
     it "should initialize it's fields from a hash" do
 
-      argument_hash = {name: "Dagobert",hobbies: "Money,Bathing"}
+      argument_hash = {name, "Dagobert",hobbies, "Money,Bathing"}
       p = Person.new(argument_hash)
       p.name.should == "Dagobert"
       p.hobbies.should == ["Money", "Bathing"]
@@ -33,15 +33,15 @@ describe Person do
   end
   describe "hobby sharing" do
     it "returns intersection of hobbies" do
-      p1 = Person.new(name: "Dagobert",hobbies: "Money,Bathing")
-      p2 = Person.new(name: "Donald",hobbies: "Bathing")
+      p1 = Person.new(name, "Dagobert",hobbies, "Money,Bathing")
+      p2 = Person.new(name, "Donald",hobbies, "Bathing")
       p1.commonHobbies(p2).should == ["Bathing"]
     end
     it "returns a list of best friends" do
-      p1 = Person.new(name: "Hans",hobbies: "Diving")
-      p2 = Person.new(name: "Dagobert1",hobbies: "Money,Bathing,Knitting")
-      p3 = Person.new(name: "Dagobert2",hobbies: "Money,Bathing")
-      p4 = Person.new(name: "Donald",hobbies: "Bathing")
+      p1 = Person.new(name, "Hans",hobbies, "Diving")
+      p2 = Person.new(name, "Dagobert1",hobbies, "Money,Bathing,Knitting")
+      p3 = Person.new(name, "Dagobert2",hobbies, "Money,Bathing")
+      p4 = Person.new(name, "Donald",hobbies, "Bathing")
       a = [p1,p2,p3,p4]
       result = p1.friendslist(a)
       result[0].should == [2,"Money, Bathing","Dagobert1","Dagobert2"]

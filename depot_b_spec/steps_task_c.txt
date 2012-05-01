@@ -25,3 +25,15 @@ have a look at it, esp. the "yield"
 #	modified:   app/views/layouts/application.html.erb
 
 == Using a Helper to Format the Price ==
+      <span class="price"><%= number_to_currency(product.price, :locale => :de, :unit => "&euro;") %>
+number_to_currency is built in; see
+http://api.rubyonrails.org/classes/ActionView/Helpers/NumberHelper.html#method-i-number_to_currency
+
+== Add Specs == 
+
+  spec/helpers/store_helper_spec.rb
+  spec/views/store/index.html.erb_spec.rb
+see documentation at: 
+https://github.com/jnicklas/capybara
+http://rubydoc.info/github/jnicklas/capybara/master/Capybara/Node/Matchers#has_selector%3F-instance_method
+

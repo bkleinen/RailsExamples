@@ -7,6 +7,8 @@
 # Visit http://www.pragmaticprogrammer.com/titles/rails4 for more book information.
 #---
 Depot::Application.routes.draw do
+  get "store/index"
+
   resources :products
 
   # The priority is based upon order of creation:

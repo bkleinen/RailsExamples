@@ -1,8 +1,11 @@
-Generate Controller for the Product Catalog
+== Generate Controller for the Product Catalog ==
  rails generate controller Store index
 Make store#index the root page of the application
  see config/routes.rb - search for "root"
 
+Check http://localhost:3000/
+
+== Create Catalog View with Style Sheet: ==
 Modify index action to initialize @products
  depot_d/app/controllers/store_controller.rb
 Create a view listing those products; use sanitize() to show html tags
@@ -11,3 +14,4 @@ Finally, add a stylesheet - remember: pages created by StoreController
 will have a html class "store":
 depot_d/app/assets/stylesheets/store.css.scss
  
+Check http://localhost:3000/

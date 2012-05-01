@@ -15,3 +15,13 @@ will have a html class "store":
 depot_d/app/assets/stylesheets/store.css.scss
  
 Check http://localhost:3000/
+
+== Adding a Page Layout ==
+Update the Main Layout to include a banner and a sidebar:
+ app/views/layouts/application.html.erb
+have a look at it, esp. the "yield"
+#	deleted:    app/assets/stylesheets/application.css
+#	new file:   app/assets/stylesheets/application.css.scss
+#	modified:   app/views/layouts/application.html.erb
+
+== Using a Helper to Format the Price ==
